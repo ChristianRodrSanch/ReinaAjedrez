@@ -8,6 +8,10 @@ Negro;
 	private Color(String cadenaAMostrar) {
 		this.cadenaAMostrar = cadenaAMostrar;
 	}
+	@Override
+	public String toString() {
+		return String.format("cadenaAMostrar=%s",cadenaAMostrar);
+	}
 	
 	
 }
