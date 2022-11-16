@@ -23,9 +23,9 @@ public char getColumna() {
 
 public void setColumna(char columna) {
 	this.columna = columna;
-	if (columna < a) {
+	if (columna < 'a') {
 		throw new IllegalArgumentException("El valor de la columna es menor que el mínimo permitido.");
- } else if (columna > h) {
+ } else if (columna > 'h') {
 		throw new IllegalArgumentException("El valor de la fila es mayor que el mínimo permitido.");
  }
 }
