@@ -38,7 +38,7 @@ public class Consola {
 		return opcionMenu;
 	}
 
-	private static void mostrarMenuDirecciones() {
+	public static void mostrarMenuDirecciones() {
 		System.out.println("Esta son las direcciones");
 		System.out.println("1.Moverte al NORTE");
 		System.out.println("2.Moverte al NORESTE");
@@ -52,6 +52,7 @@ public class Consola {
 	}
 
 	public static Direccion elegirDireccion() {
+		Direccion direccion= null;
 		int elegirDireccion;
 		do { 
 			System.out.println("Elige una direccion del menu de direcciones");
@@ -61,31 +62,49 @@ public class Consola {
 		switch(elegirDireccion) {
 		case 1:
 			System.out.println("Norte");
+			direccion=Direccion.NORTE;
 			break;
 		case 2:
 			System.out.println("NOROESTE");
+			direccion=Direccion.NOROESTE;
 			break;
 		case 3:
 			System.out.println("ESTE");
+			direccion=Direccion.ESTE;
 			break;
 		case 4:
 			System.out.println("SURESTE");
+			direccion=Direccion.SURESTE;
 			break;
 		case 5:
 			System.out.println("SUR");
+			direccion=Direccion.SUR;
 			break;
 		case 6:
 			System.out.println("SUROESTE");
+			direccion=Direccion.SURESTE;
 			break;
 		case 7: 
 			System.out.println("OESTE");
+			direccion=Direccion.OESTE;
 			break;
 		case 8:
 			System.out.println("NOROESTE");
+			direccion=Direccion.NOROESTE;
 			break;
 		}
-		return elegirDireccion;
+		return direccion;
 
 	}
+	public static  int elegirPasos() {
+		int pasos;
+		System.out.println("Eligue cuantos pasos te quieres mover");
+		pasos = Entrada.entero();
+		return pasos;
+	}
+	public static void despedirse() {
+	System.out.println("Adios mi rey");	
+	}
+	
 
 }
