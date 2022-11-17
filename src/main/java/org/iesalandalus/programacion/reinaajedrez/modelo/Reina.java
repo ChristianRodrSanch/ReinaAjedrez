@@ -15,5 +15,9 @@ public Posicion getPosicion() {
 public void setPosicion(Posicion posicion) {
 	this.posicion = posicion;
 }
-
+public Reina () {
+	setColor (Color.BLANCO);
+	this.posicion = new Posicion(1,'d');
+}
+	
 }
