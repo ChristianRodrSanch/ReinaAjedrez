@@ -1,5 +1,7 @@
 package org.iesalandalus.programacion.reinaajedrez.modelo;
 
+import java.util.Objects;
+
 public class Posicion {
 	private int fila;
 	private char columna;
@@ -31,6 +33,23 @@ public class Posicion {
 
 	}
 
+	@Override
+	public int hashCode() {
+		return Objects.hash(columna, fila);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Posicion other = (Posicion) obj;
+		return columna == other.columna && fila == other.fila;
+	}
+
 	public void setColumna(char columna) {
 		this.columna = columna;
 		if (columna < 'a') {
@@ -38,5 +57,10 @@ public class Posicion {
 		} else if (columna > 'h') {
 			throw new IllegalArgumentException("El valor de la fila es mayor que el mínimo permitido.");
 		}
+	}
+
+	public Posicion(int fila, char columna) {
+		setFila(fila);
+		setColumna(columna);
 	}
 }
