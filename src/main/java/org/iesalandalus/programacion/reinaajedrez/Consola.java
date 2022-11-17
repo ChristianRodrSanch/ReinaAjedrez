@@ -34,7 +34,18 @@ public static int elegirOpcionMenu() {
    System.out.println("Salir");
    break;
  }
- 
- }
 return opcionMenu;
+}
+private static void mostrarMenuDirecciones() {
+	System.out.println("Esta son las direcciones");
+	System.out.println("1.Moverte al NORTE");
+	System.out.println("2.Moverte al NORESTE");
+	System.out.println("3.Moverte al ESTE");
+	System.out.println("4.Moverte al SURESTE");
+	System.out.println("5.Moverte al SUR");
+	System.out.println("6.Moverte al SUROESTE");
+	System.out.println("7.Moverte al OESTE");
+	System.out.println("8.Moverte al NOROESTE");
+	
+}
 }
