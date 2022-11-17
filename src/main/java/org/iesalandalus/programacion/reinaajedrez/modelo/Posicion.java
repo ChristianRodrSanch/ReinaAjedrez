@@ -17,16 +17,26 @@ public class Posicion {
 		}
 	}
 
-public char getColumna() {
-	return columna;
-}
+	public char getColumna() {
+		return columna;
+	}
 
-public void setColumna(char columna) {
-	this.columna = columna;
-	if (columna < 'a') {
-		throw new IllegalArgumentException("El valor de la columna es menor que el mínimo permitido.");
- } else if (columna > 'h') {
-		throw new IllegalArgumentException("El valor de la fila es mayor que el mínimo permitido.");
- }
-}
+	public Posicion(Posicion posicion) {
+		if (posicion == null) {
+			throw new IllegalArgumentException("El valor de la fila es menor que el mínimo permitido.");
+		} else {
+			setFila(posicion.fila);
+			setColumna(posicion.columna);
+		}
+
+	}
+
+	public void setColumna(char columna) {
+		this.columna = columna;
+		if (columna < 'a') {
+			throw new IllegalArgumentException("El valor de la columna es menor que el mínimo permitido.");
+		} else if (columna > 'h') {
+			throw new IllegalArgumentException("El valor de la fila es mayor que el mínimo permitido.");
+		}
+	}
 }
