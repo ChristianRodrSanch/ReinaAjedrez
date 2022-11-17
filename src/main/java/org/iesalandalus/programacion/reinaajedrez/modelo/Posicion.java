@@ -50,6 +50,11 @@ public class Posicion {
 		return columna == other.columna && fila == other.fila;
 	}
 
+	@Override
+	public String toString() {
+		return String.format("Posicion [fila=%s, columna=%s]", fila, columna);
+	}
+
 	public void setColumna(char columna) {
 		this.columna = columna;
 		if (columna < 'a') {
