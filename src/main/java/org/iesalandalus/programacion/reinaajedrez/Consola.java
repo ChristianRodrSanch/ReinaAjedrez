@@ -125,6 +125,6 @@ public class Consola {
 
 	public static void despedirse() {
 		
-		System.out.println("Adios mi rey");
+		System.out.println("Adios mi rey :3");
 	}
 }
